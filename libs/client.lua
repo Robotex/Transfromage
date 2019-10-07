@@ -1493,7 +1493,7 @@ end
 ]]
 getKeys = function(self, tfmId, token)
 	-- Uses requires because it's used only once before it gets deleted.
-	local _, result = require("coro-http").request("GET", "https://api.tocu.tk/get_transformice_keys.php?tfmid=" .. tfmId .. "&token=" .. token, {
+	local _, result = require("coro-http").request("GET", "http://localhost/get_transformice_keys.php?tfmid=" .. tfmId .. "&token=" .. token, {
 		{ "User-Agent", "Mozilla/5.0" }
 	})
 	local _r = result
